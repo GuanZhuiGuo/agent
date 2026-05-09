@@ -222,6 +222,10 @@ W6  修 top 3 问题，发布到更大范围；同时决定 "要不要做记忆/
 
 ---
 
+## 🎓 (可选) 下一站 · 框架与生态
+
+本模块结束后，如果你接下来要和研发深入讨论技术方案，强烈建议继续 → [模块 09 · Agent 框架与生态](09-frameworks-and-ecosystem.md)。
+
 ## 🎓 课程结业
 
 走到这里，你已经掌握了：
@@ -232,6 +236,7 @@ W6  修 top 3 问题，发布到更大范围；同时决定 "要不要做记忆/
 
 接下来请完成 **期末项目**（见 [`exercises/exercises.md`](../exercises/exercises.md)）：为一个真实业务场景出一份完整 Agent PRD。
 
+> 进阶一站 → [模块 09 · Agent 框架与生态](09-frameworks-and-ecosystem.md)
 > 返回 → [README](../README.md) | [大纲](../SYLLABUS.md)
 
 ---

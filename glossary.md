@@ -129,3 +129,27 @@
 ---
 
 > 本术语表会随课程迭代持续更新。若你希望扩充某个词条，欢迎提 PR。
+
+
+---
+
+## 模块 09 补充：框架与生态词汇
+
+- **LangChain**：LLM 组件与链（Chain）式编排库。适合线性管道、RAG。
+- **LCEL（LangChain Expression Language）**：LangChain 的声明式组合语法，最擅长线性/简单分支管道。
+- **LangGraph**：基于有向图的 Agent 编排框架，支持循环、分支、持久状态、人审中断。LangChain 团队推荐的 Agent 默认方案。
+- **AutoGen**：微软开源的对话式 Multi-Agent 框架，研究血统，强在 Agent 间会话。
+- **CrewAI**：以"角色 + 任务 + 工艺"抽象的 Multi-Agent 框架，上手快；生产化常被质疑。
+- **LlamaIndex / Workflows**：以 RAG / 数据索引起家，2025 年后推出 Workflows 进入 Agent 编排。
+- **OpenAI Agents SDK**：OpenAI 的简化 Agent 开发 SDK；核心原语：Agent / Handoff / Guardrails。
+- **Claude Agent SDK**：Anthropic 围绕 Claude 模型的 Agent 框架，擅长工具调用与复杂推理。
+- **Pydantic AI / Vercel AI SDK / Mastra**：更轻量、偏产品工程师使用的 Agent / AI 库。
+- **MCP（Model Context Protocol）**：Anthropic 开放的 Agent↔工具 / 数据源通用协议。2026 已成事实标准。
+- **A2A（Agent-to-Agent Protocol）**：Google 推出的 Agent 间通信协议，补齐 Multi-Agent 通信层。
+- **Handoff**：Agent 之间显式移交任务的动作，见于 OpenAI Agents SDK / Swarm。
+- **Interrupt / HITL 中断**：LangGraph 等框架原生支持的"暂停等待人审"机制。
+- **pgvector**：PostgreSQL 的向量扩展，适合已有 PG + 千万级以内向量。
+- **Pinecone / Qdrant / Weaviate / Milvus / Chroma**：常见向量数据库；各自在托管度、规模、混合检索、DX 等维度不同。
+- **LangSmith / Langfuse / Arize / Braintrust / Helicone / Phoenix**：主流 Agent 可观测 & 评估平台。
+- **Session-level Trace**：以"整个任务会话"为单位的追踪，是 Agent 观测与单次 LLM 监控的核心差别。
+- **Build vs. Buy vs. Framework**：自研、买平台、用开源框架三者之间的选型三角。

@@ -50,6 +50,7 @@
 │           ↓                                                  │
 │  模块 07  评估、可观测与安全                                │
 │  模块 08  产品化、成本与落地                                │
+│  模块 09  Agent 框架与生态（LangChain / LangGraph / MCP…）  │
 ├─────────────────────────────────────────────────────────────┤
 │  附录：模板集 / 案例学习 / 练习题 / 术语表                  │
 └─────────────────────────────────────────────────────────────┘
@@ -63,7 +64,7 @@
 .
 ├── README.md                     # 本文件
 ├── SYLLABUS.md                   # 教学大纲 / 课时安排
-├── modules/                      # 8 个核心教学模块
+├── modules/                      # 10 个核心教学模块
 │   ├── 00-introduction.md
 │   ├── 01-agent-foundation.md
 │   ├── 02-memory-design.md       ⭐
@@ -72,7 +73,8 @@
 │   ├── 05-planning-and-workflow.md
 │   ├── 06-multi-agent.md         ⭐
 │   ├── 07-evaluation-safety.md
-│   └── 08-productization.md
+│   ├── 08-productization.md
+│   └── 09-frameworks-and-ecosystem.md
 ├── templates/                    # PM 可直接复用的画布 / 模板
 │   ├── agent-prd-template.md
 │   ├── memory-canvas.md
@@ -108,6 +110,7 @@
 | "要不要拆成多个 Agent？" | 模块 06 Multi-Agent |
 | "怎么证明 Agent 真的变好了" | 模块 07 评估 |
 | "成本太高，怎么优化" | 模块 08 产品化 |
+| "LangChain / LangGraph / MCP 到底怎么选" | 模块 09 框架与生态 |
 
 ### 路径 C：团队共学（2 周）
 
