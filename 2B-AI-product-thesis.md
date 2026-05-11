@@ -163,13 +163,38 @@ Agent 的"自主性"在 To B 场景中面临三个强约束：
 - **Citi Ventures（2026）**：提出 Agentic AI 定价框架——最直接的定价结构是 outcome-based，成本不绑定使用量或 API 调用，而是绑定可量化的业务结果。
 - **Bessemer Venture Partners**：在其 AI Pricing Playbook 中指出，outcomes 最大化了价值对齐，但需要供应商承担成本波动风险。
 
-### 3.4 XaaS 演进路径
+### 3.4 XaaS 演进路径（两条正交轴）
+
+> ⚠️ **常见误区**：很多人把"IDC → SaaS → 云 → 容器 → K8s → Serverless → Agent"画成一条线。**这是错的。**
+> 它混淆了 **"客户买什么（商业交付）"** 和 **"工程怎么跑（基础设施）"** 两个正交维度。
+> 正确的画法是两条**独立但相互支撑**的轴：
+
+**🅰 商业交付轴（客户视角 · 付费单位）**
 
 ```
-IDC 托管 → SaaS（按座席）→ 云计算（按资源）→ 容器/K8s（按负载）
-→ Serverless（按调用）→ Agent-as-a-Service（按任务）
-→ Outcome-as-a-Service（按结果）→ Decision-as-a-Service（按决策价值）
+自建机房  →  IDC 托管  →  IaaS（买算力）  →  PaaS（买平台）  →  SaaS（按座席 / 订阅）
+                                                                    │
+                                                                    ▼
+             FaaS / Serverless（按调用）  →  Agent-as-a-Service（按任务）
+                                                                    │
+                                                                    ▼
+            Outcome-as-a-Service（按结果）  →  Decision-as-a-Service（按决策价值）
 ```
+
+**🅱 基础设施轴（工程视角 · 运行时单元）**
+
+```
+物理机  →  虚拟机（VM）  →  容器（Docker）  →  容器编排（K8s）  →  Serverless Runtime  →  Agent Runtime
+                                                                             （LangGraph / Anthropic / OpenAI 各自的 Agent 运行时）
+```
+
+**两轴的关系**：
+
+- **是"承载"不是"替代"**：一家 SaaS 内部可以用或不用 K8s；一家 Agent-as-a-Service 供应商可以基于容器、Serverless 或自建 Agent Runtime。
+- **时间线上并非严格继承**：SaaS（1999）早于公共云（AWS 2006）；容器 / K8s / Serverless（2013–2014）几乎同期出现，并非线性接力。
+- **本文关注的是 🅰 轴**：从 SaaS → AaaS → OaaS → DaaS 的定价单位上移，这才是"X 是被信任的结果"的演进主线。🅱 轴是默默支撑它的底座。
+
+---
 
 **终态假说**：当信任累积到足够深度，业务人员不再感知底层是"Agent"还是"函数"还是"人"，只感知**结果**。此时 AI 从"辅助层"翻转为"决策层"，人反而成为执行末端。
 
@@ -486,6 +511,7 @@ Agent OS 需要提供的六大基础设施：
 | "Numeric" 定位描述 | 原文将其简称"Numeric"，读者可能不了解 | 补充：Numeric 是 AI 会计自动化平台，总融资 $89M |
 | Klarna 作为正面案例隐含 | 原文未提及 Klarna 的失败回调 | 补充反例，强化"质量 > 全面自动化"的论点 |
 | 演变路径中 "Serverless → Agentless" | 逻辑跳跃较大 | 增加中间态（Agent-as-a-Service → Outcome-as-a-Service） |
+| **"IDC → SaaS → 云 → 容器 → K8s → Serverless → Agent" 单链路** | **混淆了"商业交付"与"基础设施"两个正交维度；时间线也不严谨（SaaS 早于公共云、容器/K8s/Serverless 几乎同期）** | **改为两条独立的正交轴，详见 3.4 节重写版本** |
 
 ---
 
